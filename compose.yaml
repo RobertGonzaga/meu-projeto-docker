@@ -1,6 +1,6 @@
 services:
   db:
-    image: mysql:124.0
+    image: mysql:8.0
     container_name: todo-db
 
     environment:
