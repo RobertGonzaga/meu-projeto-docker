@@ -137,7 +137,7 @@ docker compose up -d --build
   ```
 - **Como o CI reagiu:** [O pipeline falhou na etapa Subir a stack (docker compose up -d), pois o Docker não conseguiu baixar a imagem especificada para o serviço db.]
 - **Como eu corrigi:** [alterei para mysql:8.0 novamente]
-- **Link do Pull Request:** [URL do PR]
+- **Link do Pull Request:** (https://github.com/RobertGonzaga/meu-projeto-docker/pull/1)
 
 ### Evidências
 
@@ -148,7 +148,7 @@ docker compose up -d --build
 
 ## 8. Dificuldades e Aprendizados
 
-[Escreva de 3 a 5 linhas explicando o que travou durante a atividade, como você resolveu e o que ficou mais claro sobre containers após a execução do trabalho.]
+[A maior dificuldade foi configurar corretamente o Dockerfile e ajustar as permissões para executar a aplicação com um usuário não-root, além de fazer a comunicação entre a aplicação e o banco de dados no Docker Compose. Resolvi esses problemas analisando os logs dos containers e corrigindo as configurações de permissões e do compose.yaml. Após a atividade, ficou mais claro como Dockerfile, volumes, redes e Docker Compose trabalham juntos para criar um ambiente isolado, reproduzível e fácil de implantar.]
 
 ---
 
