@@ -130,13 +130,13 @@ docker compose up -d --build
 
 ## 7. Quebra Proposital do CI
 
-- **O que eu quebrei:** [descreva a alteração exata que você fez]
+- **O que eu quebrei:** [Alterei propositalmente a imagem do banco de dados no compose.yaml, trocando mysql:8.0 por uma tag inválida (mysql:124.0), fazendo com que o Docker não conseguisse iniciar o serviço do banco.]
 - **Erro que apareceu no log:**
   ```text
-  [cole a mensagem principal do erro aqui]
+  [manifest for mysql:124.0 not found: manifest unknown]
   ```
-- **Como o CI reagiu:** [em qual step falhou e por quê]
-- **Como eu corrigi:** [o que foi alterado]
+- **Como o CI reagiu:** [O pipeline falhou na etapa Subir a stack (docker compose up -d), pois o Docker não conseguiu baixar a imagem especificada para o serviço db.]
+- **Como eu corrigi:** [alterei para mysql:8.0 novamente]
 - **Link do Pull Request:** [URL do PR]
 
 ### Evidências
